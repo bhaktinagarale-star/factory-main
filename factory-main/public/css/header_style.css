@@ -1,0 +1,136 @@
+/* ===============================================
+Navbar Styling
+================================================== */
+.header{
+
+}
+
+.top-navbar{
+    background:var(--bg2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    height: var(--navbar-height);
+}
+
+.logo-container{
+
+}
+
+.logo{
+    height: var(--navbar-height);
+    font-weight: bold;
+}
+
+.hr{
+    height: var(--navbar-height);
+    display: inline-flex;
+    align-items: center;
+    background: var(--accent-color1);
+    color: var(--txt2);
+    padding: 0 10px;
+    font-size: 3rem;
+}
+
+.wallah{
+    color: var(--txt1);
+    padding: 0 5px;
+    font-size: 2rem;
+}
+
+.nav-links-list-container{
+
+}
+
+.nav-links-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-link-item{
+    list-style-type: none;
+}
+
+.nav-link{
+    text-decoration: none;
+    color: var(--txt1);
+    display: inline-block;
+    height: var(--navbar-height);
+    align-content: center;
+    padding: 0 30px;
+    transition: var(--tr1);
+}
+
+.nav-link:hover, .nav-link.active{
+    background: var(--bgs2);
+}
+
+.nav-link:hover{
+    color: var(--accent-color1);
+}
+
+.menu-icon-container{
+    display: none;
+}
+
+.menu-icon{
+    font-size: 30px;
+    color: var(--txt1);
+}
+
+/* Small devices (mobile phones, less than 600px) */
+@media only screen and (max-width: 599px) {
+
+    .nav-links-list-container{
+        position: absolute;
+        top: var(--navbar-height);
+        left: 0;
+        right: 0;
+        transition: var(--tr1);
+        overflow: hidden;
+        max-height: 0px;
+        z-index: 10;
+    }
+    .nav-links-list-container.active{
+        max-height: 300px;
+    }
+
+    .nav-links-list{
+        flex-direction: column;
+    }
+
+    .nav-link-item{
+        width: 100%;
+    }
+
+    .nav-link{
+        width: 100%;
+        background: var(--bg2);
+        text-align: center;
+        padding: 0;
+    }
+
+    .nav-link:hover{
+        border-left:4px solid var(--accent-color1) ;
+        border-right:4px solid var(--accent-color1) ;
+        border-top: 0.1px solid var(--accent-color1);
+        border-bottom: 0.1px solid var(--accent-color1);
+    }
+
+    .menu-icon-container{
+        display: block;
+    }
+
+}
+
+/* Medium devices (tablets, 600px and up) */
+@media only screen and (min-width: 600px) and (max-width: 1023px) {
+  /* Tablet styles */
+}
+
+/* Large devices (desktops, 1024px and up) */
+@media only screen and (min-width: 1024px) {
+  /* Desktop styles */
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics</title>
+    <style>
+        /* Reset margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body style */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        /* Container for iframe */
+        .iframe-container {
+            width: 90%;
+            height: 80%;
+            border: 2px solid #007bff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        /* Style the iframe */
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Style for the refresh message */
+        p {
+            margin-top: 20px;
+            font-size: 16px;
+            color: #555;
+        }
+    </style>
+    <script type = "text/JavaScript">
+        <--//
+             function AutoRefresh( t ) {
+              setTimeout("location.reload(true);", t);
+           }
+        //-->
+     </script>
+     
+     
+ 
+  
+</head>
+<body onload = "JavaScript:AutoRefresh(50000000);">
+    <iframe height="100%" width="100%" src="https://www.appsheet.com/preview/cb876248-8ac8-4b9c-9ce3-9cfd9172b1d1" name="iframe_a"></iframe>
+
+      <p>This page will refresh every 5 seconds.</p>
+   </body>
+</html>
+
+

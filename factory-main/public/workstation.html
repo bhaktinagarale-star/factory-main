@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>XCELLNCE | Work Station</title>
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/global.css" />
+    <link rel="stylesheet" href="./css/header_style.css" />
+    <link rel="stylesheet" href="./css/main_style.css" />
+    <link rel="stylesheet" href="./css/footer_style.css" />
+    <link rel="stylesheet" href="./css/workstation.css">
+  
+</head>
+
+<body>
+    <header class="header">
+        <nav class="top-navbar">
+            <section class="logo-container">
+                <p class="logo">
+                    <span class="hr">XCELLNCE</span>
+                </p>
+            </section>
+            <section class="nav-links-list-container" id="menuList">
+                <ul class="nav-links-list">
+                    <li class="nav-link-item">
+                        <a href="./index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-link-item">
+                        <a href="./about.html" class="nav-link">About Us</a>
+                    </li>
+                    <li class="nav-link-item">
+                        <a href="./contact.html" class="nav-link">Contact Us</a>
+                    </li>
+                    <li class="nav-link-item">
+                        <a href="./dashboard.html" class="nav-link active">Dashboard</a>
+                    </li>
+                </ul>
+            </section>
+            <section class="menu-icon-container">
+                <i class="fa-solid fa-bars menu-icon" onclick="toggleMenu()"></i>
+            </section>
+        </nav>
+    </header>
+
+    <main>
+        <section class="our-workstation-table-container">
+            <header>
+                <h1>Work Station</h1>
+            </header>
+            <div class="buttons-container">
+            <div class="addWorkstationButtonContainer">
+                <button class="btn" id="addWorkstationButton">
+                    Add 
+                </button>
+            </div>
+            </div>
+
+            <table id="workstationTable" class="our-workstation-table">
+                <thead>
+                    <tr>
+                        <th>Workstation ID</th>
+                        <th>Workstation Name</th>
+                        <th>Department</th>
+                        <th>Station</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Customers rows will be inserted here via JavaScript -->
+                </tbody>
+
+            </table>
+        </section>
+
+        <!-- Form to add customers -->
+        <section class="popup" id="addWorkstationFormContainer">
+            <header>
+                <h2>Add Workstation </h2>
+            </header>
+            <div class="close-addWorkstationForm-button close-btn" id="close-addWorkstationForm-button">
+                &times;
+            </div>
+            <form id="addWorkstationForm" class="form">
+                <div class="form-element">
+                    <label for="id">Workstation ID</label>
+                    <input type="text" id="id" name="id" required class="input" />
+                </div>
+                <div class="form-element">
+                    <label for="name">Workstation Name</label>
+                    <input type="text" id="name" name="name" required class="input" />
+                </div>
+                <div class="form-element">
+                    <label for="dname">Departments</label>
+                    <input type="text" id="dname" name="dname" required class="input" />
+                </div>
+                <div class="form-element">
+                    <label for="sname">Stations</label>
+                    <select id="sname" name="sname" required class="input">
+                        <option value="" disabled selected>Select a station</option>
+                        <option value="stitching">Stitching</option>
+                        <option value="fitting">Fitting</option>
+                        <option value="cutting">Cutting</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                </div>
+                <div class="form-element">
+                    <button type="submit" class="btn saveBtn">Save</button>
+                </div>
+            </form>
+
+        </section>
+
+    </main>
+
+    <footer id="footer">
+        <p>&copy; 2024 XCELLNCE</p>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/b0cda2e9f1.js" crossorigin="anonymous"></script>
+    <script src="./js/toggle_menu.js"></script>
+    <script src="./js/workstation.js"></script>
+    
+  
+   
+</body>
+
+</html>

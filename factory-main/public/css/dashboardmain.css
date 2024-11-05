@@ -1,0 +1,49 @@
+/* Main styling for vertical sidebar */
+main {
+  display: flex;
+  height: 100%; /* Make sure main takes the full height of its parent */
+  padding: 20px; /* Add padding around the main content */
+}
+
+.tabs-container {
+  display: flex;
+  flex-direction: column; /* Arrange tabs vertically */
+  width: 220px; /* Width of the sidebar */
+  background-color: #f4f4f4; /* Background color for sidebar */
+  padding: 10px; /* Padding inside the tabs container */
+  border: 1px solid #ddd; /* Border for separation */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.tabs {
+  list-style: none; /* Remove bullet points from the list */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+}
+
+.tab-item {
+  margin-bottom: 10px; /* Space between tab items */
+}
+
+.tab-link {
+  display: block; /* Make the link fill the space */
+  padding: 12px 15px; /* Padding for the link */
+  font-size: 16px; /* Font size */
+  font-weight: 500; /* Font weight */
+  color: #333; /* Text color */
+  text-decoration: none; /* Remove underline */
+  background-color: #eaeaea; /* Background color */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s, color 0.3s; /* Transition for hover effect */
+}
+
+/* Hover and active state styles */
+.tab-link:hover {
+  background-color: #ddd; /* Lighter background on hover */
+  color: #000; /* Darker text color on hover */
+}
+
+.tab-link.active {
+  background-color: #333; /* Active tab color */
+  color: #fff; /* Text color for active tab */
+}

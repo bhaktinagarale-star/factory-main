@@ -1,0 +1,34 @@
+/* ===============================================
+GLOBAL VARIABLES AND RESET
+================================================== */
+
+:root{
+    /*====== COLOURS =====*/
+    --txt1:#ffffff;
+    --txt2:#004274;
+    --bg1: #ffffff;
+    --bg2: #004274;
+    --bg3: #040b2f;
+    --bgs2:#005ca3;
+    --accent-color1:#ffa600;
+    --accent-color2:#ff4500;
+
+    /*===== SIZES =====*/
+    --navbar-height:70px;
+
+    /* TRANSITION */
+    --tr1: all 0.5s ;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body,html{
+    height: 100%;
+    width: 100%;
+    background: var(--bg1);
+}

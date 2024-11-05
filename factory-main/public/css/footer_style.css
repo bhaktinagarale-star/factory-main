@@ -1,0 +1,14 @@
+/* ===============================================
+FOOTER STYLING
+================================================== */
+
+#footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--txt1);
+  padding: 20px 0px;
+  background: var(--bg2);
+  height: var(--navbar-height);
+}

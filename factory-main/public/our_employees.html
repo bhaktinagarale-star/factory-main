@@ -1,0 +1,247 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>XCELLNCE | Our Employees</title>
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/global.css" />
+    <link rel="stylesheet" href="./css/header_style.css" />
+    <link rel="stylesheet" href="./css/main_style.css" />
+    <link rel="stylesheet" href="./css/footer_style.css" />
+    <link rel="stylesheet" href="./css/our_employees.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="top-navbar">
+        <section class="logo-container">
+          <p class="logo">
+            <span class="hr">XCELLNCE</span>
+          </p>
+        </section>
+        <section class="nav-links-list-container" id="menuList">
+          <ul class="nav-links-list">
+            <li class="nav-link-item">
+              <a href="./index.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-link-item">
+              <a href="./about.html" class="nav-link">About Us</a>
+            </li>
+            <li class="nav-link-item">
+              <a href="./contact.html" class="nav-link">Contact Us</a>
+            </li>
+            <li class="nav-link-item">
+              <a href="./dashboard.html" class="nav-link active">Dashboard</a>
+            </li>
+          </ul>
+        </section>
+        <section class="menu-icon-container">
+          <i class="fa-solid fa-bars menu-icon" onclick="toggleMenu()"></i>
+        </section>
+      </nav>
+    </header>
+
+    <main>
+      <section class="our-employees-table-container">
+        <header><h1>Employees</h1></header>
+
+        <div class="buttons-container">
+          <!-- Department Filter -->
+          <div>
+            <label for="departmentFilter">Filter by Department: </label>
+            <select id="departmentFilter" class="departmentOptionsContainer">
+              <option value="">All Departments</option>
+              <!-- Other options will be inserted here via JavaScript -->
+            </select>
+          </div>
+
+          <div class="addNewEmployeeButtonContainer">
+            <button class="btn" id="addNewEmployeeButton">
+              Add 
+            </button>
+          </div>
+        </div>
+
+        <!-- Table to display employee data -->
+        <table id="employeeTable" class="our-employees-table">
+          <thead>
+            <tr>
+              <th>Employee ID</th>
+              <th>Name</th>
+              <th>Department</th>
+              <th>Joining Date</th>
+              <th>Salary</th>
+              <th>Email</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Employee rows will be inserted here via JavaScript -->
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Form to add a new employee -->
+      <section class="popup" id="addNewEmployeeFormContainer">
+        <header>
+          <h2>Add New Employee</h2>
+        </header>
+        <div
+          class="close-addEmployeeForm-button close-btn"
+          id="close-addEmployeeForm-button"
+        >
+          &times;
+        </div>
+        <form id="addEmployeeForm" class="form">
+          <div class="form-element">
+            <label for="id">Employee ID:</label>
+            <input type="text" id="id" name="id" required class="input" />
+          </div>
+          <div class="form-element">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required class="input" />
+          </div>
+          <div class="form-element">
+            <label for="department">Department:</label>
+            <select
+              id="department"
+              name="department"
+              class="input departmentOptionsContainer"
+              required
+            >
+              <option value="" disabled selected>Select department</option>
+              <!-- Other options will be inserted here via JavaScript -->
+            </select>
+          </div>
+          <div class="form-element">
+            <label for="joiningDate">Joining Date:</label>
+            <input
+              type="date"
+              id="joiningDate"
+              name="joiningDate"
+              required
+              class="input"
+            />
+          </div>
+          <div class="form-element">
+            <label for="salary">Salary:</label>
+            <input
+              type="number"
+              id="salary"
+              name="salary"
+              required
+              class="input"
+            />
+          </div>
+          <div class="form-element">
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              class="input"
+            />
+          </div>
+          <div class="form-element">
+            <button type="submit" class="btn saveBtn">Save</button>
+          </div>
+        </form>
+      </section>
+
+      <!-- Form to edit an existing employee -->
+      <section class="popup" id="editEmployeeFormContainer">
+        <header>
+          <h2>Edit Existing Employee</h2>
+        </header>
+        <div
+          class="close-editEmployeeForm-button close-btn"
+          id="close-editEmployeeForm-button"
+        >
+          &times;
+        </div>
+        <form id="editEmployeeForm" class="form">
+          <div class="form-element">
+            <label for="editId">Employee ID:</label>
+            <input
+              type="text"
+              id="editId"
+              name="editId"
+              readonly
+              class="input"
+            />
+          </div>
+          <div class="form-element">
+            <label for="editName">Name:</label>
+            <input
+              type="text"
+              id="editName"
+              name="editName"
+              required
+              class="input"
+            />
+          </div>
+          <div class="form-element">
+            <label for="editDepartment">Department:</label>
+            <select
+              id="editDepartment"
+              name="editDepartment"
+              required
+              class="input departmentOptionsContainer"
+            >
+              <option value="" disabled selected>Select department</option>
+              <!-- Other options will be inserted here via JavaScript -->
+            </select>
+          </div>
+          <div class="form-element">
+            <label for="editJoiningDate">Joining Date:</label>
+            <input
+              type="date"
+              id="editJoiningDate"
+              name="editJoiningDate"
+              required
+              class="input"
+            />
+          </div>
+          <div class="form-element">
+            <label for="editSalary">Salary:</label>
+            <input
+              type="number"
+              id="editSalary"
+              name="editSalary"
+              required
+              class="input"
+            />
+          </div>
+          <div class="form-element">
+            <label for="editEmail">Email:</label>
+            <input
+              type="email"
+              id="editEmail"
+              name="editEmail"
+              required
+              class="input"
+            />
+          </div>
+          <div class="form-element">
+            <button type="submit" class="btn updateEmployeeBtn">
+              Update Employee
+            </button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer id="footer">
+      <p>&copy; 2024 XCELLNCE</p>
+    </footer>
+
+    <script
+      src="https://kit.fontawesome.com/b0cda2e9f1.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/toggle_menu.js"></script>
+    <script src="./js/our_employees.js"></script>
+  </body>
+</html>
